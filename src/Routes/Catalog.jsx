@@ -1,3 +1,6 @@
+import './Catalog.css'
+
+
 function Catalog() {
   return <h2>Catalog View</h2>;
 }

@@ -1,3 +1,5 @@
+import './DetailedView.css'
+
 function DetailedView() {
   return <h2>Detailed View</h2>;
 }
