@@ -1,42 +1,21 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+:root {
+  --accent: #2978b5;
+  --muted: #666;
+  --bg: #f7fbff;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; margin: 0; font-family: Inter, system-ui, Arial, sans-serif; background: var(--bg); color: #111; }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+.app-shell { display: flex; flex-direction: column; min-height: 100vh; }
+.topbar { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.nav a { margin-left: 12px; text-decoration: none; color: var(--accent); font-weight: 600; }
+.main { flex: 1; padding: 20px; max-width: 1100px; margin: 0 auto; width: 100%; }
+.welcome { text-align: center; padding: 40px 10px; background: #fff; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+.cta { display: inline-block; margin-top: 12px; padding: 10px 18px; background: var(--accent); color: #fff; border-radius: 8px; text-decoration: none; }
+.footer { padding: 12px 20px; text-align: center; color: var(--muted); font-size: 14px; }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+@media (max-width: 700px) {
+  .topbar { flex-direction: column; align-items: flex-start; gap: 8px; }
+  .main { padding: 12px; }
 }
