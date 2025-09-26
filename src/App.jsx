@@ -6,10 +6,7 @@ export default function App() {
     <div className="app-shell">
       <header className="topbar">
         <h1>Doggy Daycare</h1>
-        <nav className="nav">
-          <Link to="/">Start</Link>
-          <Link to="/catalog">Katalog</Link>
-        </nav>
+        {/* Removed the small nav buttons */}
       </header>
 
       <main className="main">

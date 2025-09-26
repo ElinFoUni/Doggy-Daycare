@@ -14,7 +14,7 @@ function DetailedView() {
   useEffect(() => {
     async function loadOne() {
       try {
-        const res = await fetch("https://api.jsonbin.io/v3/b/YOUR_BIN_ID"); // replace with your bin id
+        const res = await fetch("https://api.jsonbin.io/v3/b/68d6fcbfae596e708ffd15f0");
         const payload = await res.json();
         const data = payload.record ?? payload;
         const arr = Array.isArray(data) ? data : data.record ?? [];

@@ -8,12 +8,24 @@
 html, body, #root { height: 100%; margin: 0; font-family: Inter, system-ui, Arial, sans-serif; background: var(--bg); color: #111; }
 
 .app-shell { display: flex; flex-direction: column; min-height: 100vh; }
-.topbar { display: flex; justify-content: space-between; align-items: center; padding: 12px 20px; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,0.06); }
+.topbar {
+  display: flex;
+  justify-content: center;   /* center the title */
+  align-items: center;
+  padding: 12px 20px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
 .nav a { margin-left: 12px; text-decoration: none; color: var(--accent); font-weight: 600; }
 .main { flex: 1; padding: 20px; max-width: 1100px; margin: 0 auto; width: 100%; }
 .welcome { text-align: center; padding: 40px 10px; background: #fff; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
 .cta { display: inline-block; margin-top: 12px; padding: 10px 18px; background: var(--accent); color: #fff; border-radius: 8px; text-decoration: none; }
-.footer { padding: 12px 20px; text-align: center; color: var(--muted); font-size: 14px; }
+.footer {
+  padding: 12px 20px;
+  text-align: center;        /* center the footer text */
+  color: var(--muted);
+  font-size: 14px;
+}
 
 @media (max-width: 700px) {
   .topbar { flex-direction: column; align-items: flex-start; gap: 8px; }
