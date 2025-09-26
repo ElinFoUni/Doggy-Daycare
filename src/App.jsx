@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import "./App.css";
+import Catalog from "./Catalog";
+import DetailedView from "./DetailedView";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <BrowserRouter>
+      <div className="app-shell">
+        <header className="topbar">
+          <h1>Doggy Daycare</h1>
+          <nav>
+            <Link to="/">Welcome to Doggy Daycare!</Link>
+            <Link to="/catalog">Catalog</Link>
+          </nav>
+        </header>
 
-export default App
+        <main className="main">
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <section className="welcome">
+                  <h2>Välkommen till Doggy Daycare 🐶</h2>
+                  <p>
+                    Här kan du se alla hundar som besöker dagiset. Klicka vidare
+                    för att se detaljer om varje hund.
+                  </p>
+                  <Link className="cta" to="/catalog">
+                    Gå till katalogen
+                  </Link>
+                </section>
+              }
+            />
+            <Route path="/catalog" element={<Catalog />} />
+            <Route path="/dogs/:chip" element={<DetailedView />} />
+          </Routes>
+        </main>
+
+        <footer className="footer">
+          <small>Doggy Daycare — Skola Projekt</small>
+        </footer>
+      </div>
+    </BrowserRouter>
+  );
+}
+export default App;
