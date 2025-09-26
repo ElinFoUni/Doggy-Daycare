@@ -14,19 +14,18 @@ export default function App() {
 
       <main className="main">
         <section className="welcome">
-          <h2>Välkommen till Doggy Daycare 🐶</h2>
+          <h2>Welcome to Doggy Daycare 🐶</h2>
           <p>
-            Här kan du se alla hundar som besöker dagiset. Gå till katalogen för
-            att bläddra eller klicka dig vidare till en hunds detaljsida.
+            Here you can view all our doggy day care visitors in our catalog:
           </p>
           <Link className="cta" to="/catalog">
-            Gå till katalogen
+            Go to the Catalog!
           </Link>
         </section>
       </main>
 
       <footer className="footer">
-        <small>Doggy Daycare • Skolprojekt</small>
+        <small>Doggy Daycare • School project</small>
       </footer>
     </div>
   );
